@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Lookup the RecyclerView in activity layout
+
         val itemsRv = findViewById<RecyclerView>(R.id.itemsRv)
-        // Create adapter passing in the list of emails
+
         adapter = ItemAdapter(items)
-        // Attach the adapter to the RecyclerView to populate items
+
         itemsRv.adapter = adapter
 
         // lifecycleScope.launch (Dispatchers.IO){
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Set layout manager to position the items
+
         itemsRv.layoutManager = LinearLayoutManager(this).also {
             val dividerItemDecoration = DividerItemDecoration(this, it.orientation)
             itemsRv.addItemDecoration(dividerItemDecoration)
